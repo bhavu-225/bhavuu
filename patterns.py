@@ -162,7 +162,7 @@ while(x<=13):
     print(j+3)
     while(j<=10):
         print("@")
-        j=j+2
+        j=j+2  
 x=5
 m=3
 j=1
