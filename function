@@ -1,0 +1,60 @@
+# simple function
+def hi():
+    print("hello.! how are you?")
+hi()
+# ---------------------------
+# add value
+def add(x):
+    return x+12
+print(add(5))
+# --------------------
+# multiply value
+def mul(z):
+    return z*7
+print(mul(5))
+# ---------------------------
+# odd even funct
+def odd_even(z):
+    if z%2==0:
+        print("z is even")
+    else:
+        print("z is odd")
+odd_even(6)
+# -----------------------
+# lambda
+# adding numb 
+x=lambda a: a+7
+print(x(6))
+# --------------------------------
+# multiply
+x=lambda a:a*9
+print(x(9))
+# -------------------------------
+# continous mutiply
+x=lambda a:a*a*a
+print(x(6))
+# -------------------------
+# lambda with filter dis will filter d odd one 
+l1=[24,56,78,2,3,9,97]
+final1=(list(filter(lambda x: (x%2!=0),l1)))
+print(final1)
+# ----------------------------------------
+# lamba with filter dis will filter d even 
+l1=[24,56,78,2,3,9,97]
+list2=list(filter(lambda x:(x%2==0),l1))
+print(list2)
+# ------------------------------------------------
+# lambda with map
+l1=[24,56,78,2,3,9,97]
+final1=list(map(lambda x:x*2,l1))
+print(final1)
+# ------------------------------------------------
+# lambda with map sequence of 2
+l1=[1,2,3,4,5,6,7,8,9]
+final1=list(map(lambda x:x*2,l1))
+print(final1)
+#lambda with reduce
+from functools import reduce
+l1=[1,2,3,4,5,6,7,8,9]
+final1=reduce(lambda x,y:x+y,l1)
+print(final1)
