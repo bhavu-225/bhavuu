@@ -2,7 +2,7 @@ class Marksheet:
     def info(a, b, c):
 
        
-        l = dict{"name":a, "total":b, "percentage":c}
+        l = dict {"name":a, "total":b, "percentage":c}
         print(l)
         if sub1m <= 60:
             print("your DSP mks are less than 60 ")

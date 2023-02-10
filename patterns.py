@@ -152,25 +152,47 @@
 #         print(b+c)
         # j=j+2
 # ---------------
-j=5
-k=5
-i=4
-x=9
-while(x<=13):
-    x=x+1
-    j=j+3
-    print(j+3)
-    while(j<=10):
-        print("@")
-        j=j+2  
-x=5
-m=3
-j=1
-while(j<=5):
-    x=x+1
-    m=x+2
-    print(m)
-    while(m<=25):
-        print(m)
-        m=m+15
-# 
+# j=5
+# k=5
+# i=4
+# x=9
+# while(x<=13):
+#     x=x+1
+#     j=j+3
+#     print(j+3)
+#     while(j<=10):
+#         print("@")
+#         j=j+2  
+# x=5
+# m=3
+# j=1
+# while(j<=5):
+#     x=x+1
+#     m=x+2
+#     print(m)
+#     while(m<=20):
+#         print(m)
+#         m=m+15
+# -----------------------------
+# m=1
+# n=-1
+# x=6
+# while(x<=9):
+#     x=x+1
+#     m=m+n+x
+#     print(m)
+#     while(m<=20):
+#         print(m)
+#         m=m+5   
+#  
+a=5
+b=4
+z=1
+while(z<=10):
+    z=z+4
+    b=b+(2*a)
+    print(b)
+    while(b<=15):
+        b=b-5
+        print(b)
+        b=b+7

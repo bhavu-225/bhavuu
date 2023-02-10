@@ -1,0 +1,17 @@
+class triangle:
+    def __init__(self,a,b,c):
+        self.a=a
+        self.b=b
+        self.c=c
+    def get_perimeter(self):
+            p =(self.a + self.b + self.c / 2)
+            print(p)
+    def get_area(self):
+            s=(s*(s-self.a)*(s-self.b)*(s-self.c))** 0.5
+            print(s)
+a=float(input("a="))
+b=float(input("b="))
+c=float(input("c=") )           
+t=triangle(a,b,c)
+t.get_perimeter()
+t.get_area()

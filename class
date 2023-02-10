@@ -6,7 +6,7 @@ class Phone:
 p1=Phone()
 p1.make_call()
 p1.play_game()
-# --------------------------------
+# # --------------------------------
 class Phone1:
     def set_cost(self,cost):
         self.cost=cost
@@ -29,3 +29,99 @@ p2.make_call()
 p2.play_game()
 p2.show_cost()
 p2.show_color()
+# -----------------------------
+# class with constructor (__init__)
+class employee:
+    def __init__(self,name,age,salary,gender):
+        self.name=name
+        self.age=age
+        self.salary=salary
+        self.gender=gender
+    def show_employee_detail(self):
+        print("name of employee:",self.name)
+        print("age of employee:",self.age)
+        print("salary of employee:",self.salary)
+        print("gender of employee:",self.gender)
+p1=employee("zaid",25,50000,"male")
+p1.show_employee_detail () 
+# --------------------------------------------------------- 
+# inheritance 
+class vehicle:
+    def __init__(self,mileage,cost):
+        self.mileage=mileage
+        self.cost=cost
+    def show_vehicle_detail(self):
+        print("mileage of vehicle",self.mileage)
+        print("cost of vehicle",self.cost)
+p1=vehicle(200,50000)   
+class car(vehicle):
+    def show_car_detail(self):
+        print("i have a car")
+p2=car(400,40000)
+p1.show_vehicle_detail() 
+p2.show_car_detail()
+# -----------------------------------
+class animals:
+    def __init__(self,name,species):
+        self.name=name
+        self.species=species
+    def show_details(self):
+        print("name of animal:",self.name)
+        print("species of animal",self.species)
+zoo=animals("dog","labrador")
+
+class animal_1(animals):
+    def __init__(self,name,species,weight):
+         self.weight=weight
+    def show_other_detail(self):
+        print("weight of animal",self.weight)
+
+x1 = input("value : ")
+x2 = input("value : ")
+x3 = input("value : ")
+z=animal_1(x1, x2, x3)
+zoo.show_details()
+z.show_other_detail()
+# ----------------------------------------------------------
+class animals:
+    def __init__(self,name,species):
+        self.name=name
+        self.species=species
+    def show_details(self):
+        a=input("name of animal:")
+        b=input("species of animal")
+zoo=animals("dog","labrador")
+
+class animal_1(animals):
+    def __init__(self,name,species,weight):
+         self.weight=weight
+    def show_other_detail(self):
+        c=input("weight of animal")
+z1=animal_1("a","b","c")
+zoo.show_details()
+z1.show_other_detail()
+# ------------------------------------------
+# 
+class family:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def get_details(self):
+        name=input("enter your name:")
+        age=input("enter your age:")
+            
+p=family("name","age")
+class family1(family):
+    def __init__(self,name,age,address):
+        self.address=address
+    def get_further_details(self):
+        address=input("enter your address:")
+
+p1=family1("name","age","address")
+
+p.get_details()
+p1.get_further_details()
+# --------------------------------------
+# 
+       
+    
