@@ -45,6 +45,7 @@
 # t1.get_perimeter()
 # t1.get_area()
 # ---------------------------------------------
+# INHERITANCE
 class triangle:
     def __init__(self,side1,side2,side3):
         self.side1=side1

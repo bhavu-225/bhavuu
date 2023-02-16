@@ -1,17 +1,17 @@
-class employee:
-    def __init__(self,name,age,salary,gender):
-        self.name=name
-        self.age=age
-        self.salary=salary
-        self.gender=gender
-    def show_employee_detail(self):
-        a=input("name of employee:")
-        b=input("age of employee:")
-        c=input("salary of employee:")
-        d=input("gender of employee:")
+# class employee:
+#     def __init__(self,name,age,salary,gender):
+#         self.name=name
+#         self.age=age
+#         self.salary=salary
+#         self.gender=gender
+#     def show_employee_detail(self):
+#         a=input("name of employee:")
+#         b=input("age of employee:")
+#         c=input("salary of employee:")
+#         d=input("gender of employee:")
         
-p1=employee("a","b","c","d")
-p1.show_employee_detail ()  
+# p1=employee("a","b","c","d")
+# p1.show_employee_detail ()  
 # -----------------------------------------
 # 
 # a=int(input("value1:"))
@@ -56,5 +56,23 @@ p1.show_employee_detail ()
 
     # else:
         # print("u got d name have fun")
+class student:
+    def __init__(self,name,enroll):
+        self.name=name
+        self.enroll=enroll
+    # def get__details(self):
+    #     self.self=self
+    #     print("name:",self.name,"enroll:",self.enroll)
+list_of_student=[]        
+for x in range(2):
+    name=int((input("enter your name")))
+    enroll=int((input("enter your name")))
+    data=(student,name,enroll)
+    list_of_student.append(data)
+    print(x)
+myclass=student()
+    
 
+
+    
 
