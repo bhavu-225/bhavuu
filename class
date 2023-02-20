@@ -45,7 +45,7 @@ class employee:
 p1=employee("zaid",25,50000,"male")
 p1.show_employee_detail () 
 # --------------------------------------------------------- 
-# inheritance 
+#inheritance 
 class vehicle:
     def __init__(self,mileage,cost):
         self.mileage=mileage

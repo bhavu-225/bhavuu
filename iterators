@@ -1,77 +1,183 @@
-# return tuple to print each value
-mytuple=("banana","cherry","kiwi")
-myit=iter(mytuple)
-print(next(myit))
-print(next(myit))
-print(next(myit))
+# #return tuple to print each value
+# mytuple=("banana","cherry","kiwi")
+# myit=iter(mytuple)
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
 # -----------------------------------------
-# each alphabet of string
-mystr="banana"
-myit=iter(mystr)
-print(next(myit))
-print(next(myit))
-print(next(myit))
-print(next(myit))
-print(next(myit))
-print(next(myit))
+## each alphabet of string
+# mystr="banana"
+# myit=iter(mystr)
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
 # ------------------------------------------
-# tuple in loop
-mytup=("banana","kiwi","apple")
-for z in mytup:
-    print(z)
+## tuple in loop
+# mytup=("banana","kiwi","apple")
+# for z in mytup:
+#     print(z)
 # ---------------------------------------------
-# string in loop
-mystr="apple"
-for z in mystr:
-    print(z)
+## string in loop
+# mystr="apple"
+# for z in mystr:
+#     print(z)
 # -----------------------------------------------
-# returns numbers, starting with 1, and each sequence will increase by one
-class numbers:
-    def __iter__(self):
-        self.a= 1
-        return self
-    def __next__(self):
-        z=self.a
-        self.a+=1
-        return z
-myclass=numbers()
-myit=iter(myclass)
-print(next(myit)) 
-print(next(myit))
-print(next(myit))
-print(next(myit))
-print(next(myit))  
+## returns numbers, starting with 1, and each sequence will increase by one
+# class numbers:
+#     def __iter__(self):
+#         self.a= 1
+#         return self
+#     def __next__(self):
+#         z=self.a
+#         self.a+=1
+#         return z
+# myclass=numbers()
+# myit=iter(myclass)
+# print(next(myit)) 
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))
+# print(next(myit))  
 # ----------------------------------------------
-class mynumber:
-    def __iter__(self):
-        self.a = 1
-        return self
-    def __next__(self):
-        if self.a <= 25:
-            z = self.a
-            self.a += 1
-            return z
-        else:
-            raise StopIteration
-myclass = mynumber()
-myit = iter(myclass)
-for z in myit:
-    print(z)
+## print number 
+# class mynumber:
+#     def __iter__(self):
+#         self.a = 1
+#         return self
+#     def __next__(self):
+#         if self.a <= 25:
+#             z = self.a
+#             self.a += 1
+#             return z
+#         else:
+#             raise StopIteration
+# myclass = mynumber()
+# myit = iter(myclass)
+# for z in myit:
+#     print(z)
 # ------------------
-class powertwo:
-    def __init__(self,max):
-        self.max=max
+## power of two
+# class PowTwo:
+#     def __init__(self, max=0):
+#         self.max = max
+#     def __iter__(self):
+#         self.n = 0
+#         return self
+#     def __next__(self):
+#         if self.n <= self.max:
+#             result = 2 ** self.n
+#             self.n += 1
+#             return result
+#         else:
+#             raise StopIteration
+# numbers = PowTwo(3)
+# i = iter(numbers)
+# for i in PowTwo(3):
+#     print(i)
+# ------------------------------------------------
+## iterator without using loop
+# names={"smith","john","kelvin","zayed"}
+# name_iter=iter(names)
+# marks=[25,45,56,68]
+# mark_iter=iter(marks)
+# print(next(name_iter))
+# print(next(name_iter))
+# print(next(name_iter))
+# print(next(name_iter))
+# print(next(mark_iter))
+# print(next(mark_iter))
+# print(next(mark_iter))
+# print(next(mark_iter))
+# ---------------------------------------------------
+# a=input("name")
+# b=input("marks")
+# dict=input({"name" : " " ,"marks": " "})
+# mydict=iter(dict)
+# print(next(mydict))
+## power of two with loop nd without loop
+# class poweroftwo:
+#     def __iter__(self):
+#        self.numb = 2
+#        return self
+#     def __next__(self):
+#        result = self.numb
+#        self.numb *= 2
+#        return result
+# two_powers = poweroftwo()
+# iter_obj = iter(two_powers)
+# x=input
+# for x in poweroftwo():
+#     if x<=20:
+#       print(x)    
+# print(next(iter_obj))
+# print(next(iter_obj))
+# print(next(iter_obj))
+# print(next(iter_obj))
+class Alphabet:
     def __iter__(self):
-        self.a=1
-        return self.max
+       self.alpha = 65
+       return self
     def __next__(self):
-       if  self.a <= self.max:
-        result =2** self.a
-        self.a+=1
-        return result
-       else:
-           StopIteration
-myclass= powertwo()
-myit=iter(myclass)
-for m in myit:
-    print(m)
+       if self.alpha > 90:
+           raise StopIteration
+       y = self.alpha
+       self.alpha += 1
+       return chr(y)
+myalphabets = Alphabet()
+iter_obj = iter(myalphabets)
+for letter in iter_obj:
+   print(letter, end=" ") 
+# --------------------------------------
+# print a to z in lower case 
+class Alphabets:
+    def __iter__(self):
+       self.alpha = 97
+       return self
+    def __next__(self):
+       if self.alpha > 122:
+           raise StopIteration
+       z = self.alpha
+       self.alpha += 1
+       return chr(z)
+myalphabet = Alphabets()
+iter_obj = iter(myalphabet)
+for letters in iter_obj:
+   print(letters, end=" ") 
+#   print a to z in upper case using iter 
+class Alphabets1:
+    def __iter__(self):
+       self.alpha = 65
+       return self
+    def __next__(self):    
+        if self.alpha > 90:
+           raise StopIteration
+        x = self.alpha
+        self.alpha += 1
+        return chr(x)
+alphabets = Alphabets1()
+iter_obj = iter(alphabets)
+for lett in iter_obj:
+   print(lett, end=" ")
+# ----------------------------------------------------
+class one_to_ten:
+    
+   def __iter__(self):
+       self.value = 1
+       return self
+   def __next__(self):
+       if self.value > 10:
+           raise StopIteration
+
+       temp = self.value
+       self.value += 0.5
+       return temp
+obj = one_to_ten()
+obj_iter = iter(obj)
+print(next(obj_iter))
+print(next(obj_iter))
+print(next(obj_iter))
+print(next(obj_iter))             
+             

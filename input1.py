@@ -34,7 +34,7 @@
 # else:
     # print("select valid operation")
 # 
-# data=[]
+# data={}
 # z=input("user defined")
 # for x in range(int(z)):  
 #     name=input("name:")

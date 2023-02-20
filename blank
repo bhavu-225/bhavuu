@@ -1,0 +1,33 @@
+office_data={}
+mydata=input("how many user you want:")
+for x in range(int(mydata)):
+    name=input("name:")
+    position=input("position:")
+    dob=input("dob:")
+    temp = {}
+    temp["name"]=name
+    temp["dob"] = dob
+    temp["position"]= position
+    
+    office_data.update(temp)
+print(x)
+
+choice = int(input("do you want to (1) add/update an name to the dictionary or (2) remove an name: (1 or 2):  \n (3) update position: or (4) remove postion:((3 or 4): \n (5) update dob: or (6) remove dob: (5 or 6): "))
+  
+if choice in [1,2]:
+        if choice == 1:
+            office_data[input("key: ")] = input("value: ")
+        else:
+            office_data.pop(input("key: "))
+if choice in [3,4]:
+        if choice == 3:
+            office_data[input("key: ")] = input("value: ")
+        else:
+            office_data.pop(input("key: "))
+if choice in [5,6]:
+        if choice == 1:
+            office_data[input("key: ")] = input("value: ")
+        else:
+            office_data.pop(input("key: "))
+print(office_data)                        
+            
