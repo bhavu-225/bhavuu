@@ -1,0 +1,30 @@
+f=open("C:/Users/priya/OneDrive/Desktop/bhavuu/file read.txt","r")
+print(f.read())
+f.close()
+# ------------------------------
+# read specific line
+f=open("C:/Users/priya/OneDrive/Desktop/bhavuu/file read.txt","r")
+print(f.readline())
+f.close()
+# ----------------------------------
+# read all lines
+f=open("C:/Users/priya/OneDrive/Desktop/bhavuu/file read.txt","r")
+print(f.readlines())
+f.close()
+# -----------------------------------
+f=open("C:/Users/priya/OneDrive/Desktop/bhavuu/file read.txt","a")
+a=12
+b=13
+c=6
+k=a+b+c
+f.write(str(k))
+f.close()
+# -----------------------------------
+f=open("C:/Users/priya/OneDrive/Desktop/bhavuu/file read.txt","a")
+a=2
+b=8
+c=2
+z=a*b-c
+k=a*c
+f.write(str(z) + str(k))
+f.close()

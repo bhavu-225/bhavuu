@@ -8,8 +8,8 @@ class task_management:
     def print_task_mangement(self):
         print(self.name,self.position,self.dob)
         
-    choice = input("What do you want to do?:\n add = A\n delete = D\n update = U\n search = S\n display = DS\n")
-    ask=int(input("do you want to make changes: update name = 1 \n update position =2 \n update dob =3\n"))
+choice = input("What do you want to do?:\n add = A\n delete = D\n update = U\n search = S\n display = DS\n")
+ask=int(input("do you want to make changes: update name = 1 \n update position =2 \n update dob =3\n"))
         
 def up_nme(): 
     x = 'y'

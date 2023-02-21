@@ -8,4 +8,28 @@ print(y)
 x=abs(-25.4)
 print(x)
 # --------------------
+# Return the value of 5 to the power of 4 (same as 5 * 5 * 5 *5):
+x=pow(5,4)
+print(x)
+# ---------------------------------------
+# square root
+import math
+x = math.sqrt(89)
+print(x)
+# -----------------------------------
+# upward nearest num nd downward nearest num
+import math
+
+x = math.ceil(6.5)
+y = math.floor(3.2)
+
+print(x) 
+print(y)
+# ---------------------------------------
+import math
+
+x = math.tau
+
+print(x)
+
 
