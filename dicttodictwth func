@@ -1,10 +1,46 @@
 class task_management:
+    
     def __init__(self,name,position,dob):
         self.name=name
         self.position=position
         self.dob=dob
+        
     def print_task_mangement(self):
         print(self.name,self.position,self.dob)
+        
+    choice = input("What do you want to do?:\n add = A\n delete = D\n update = U\n search = S\n display = DS\n")
+    ask=int(input("do you want to make changes: update name = 1 \n update position =2 \n update dob =3\n"))
+        
+def up_nme(): 
+    x = 'y'
+    while x == 'y':
+        update_name=input("which name you want to update?")
+        x = input("Enter new name: ")
+        office_data[x] = office_data[update_name]
+        del office_data[update_name]
+        obj=task_management(name,position,dob)
+        office_data.append(obj)
+        print(office_data)
+        b =input("do you want to update another name? (y/n) :")
+        
+        
+def del_tsk():
+    x = 'y'
+    while x == 'y':
+        delete_name=input("which category you want to delete?")
+    for i in  office_data:
+        if office_data[name] == delete_name: 
+            del office_data[name]
+            b =input("do you want to delete another name? (y/n) :")
+def s_pr():
+    x = 'y'
+    while x == 'y':
+        search_position = input("Enter product name you want to search: ")
+        for i in office_data:
+            if office_data["position"] == search_position:
+               print(office_data) 
+            x =input("do you want to search another product? (y/n) :")
+        
 office_data={}   
 userchoice=input("how many user you want:")
 for x in range(int(userchoice)):
@@ -16,22 +52,19 @@ for x in range(int(userchoice)):
     temp["position"]= position
     office_data[name]=temp
 print(office_data)
-def ad_tsk(): 
-    x = 'y'
-    while x == 'y':
-        update_name=input("which name you want to update?")
-        x = input("Enter new name: ")
-        office_data[x] = office_data[update_name]
-        del office_data[update_name]
-        obj=task_management(name,position,dob)
-        office_data.append(obj)
-        print(office_data)
-        b =input("do you want to update another name? (y/n) :")
-def del_tsk():
-    x = 'y'
-    while x == 'y':
-        delete_name=input("which category you want to delete?")
-    for i in  office_data:
-        if office_data[name] == delete_name: 
-            office_data.remove(i)
-            b =input("do you want to delete another name? (y/n) :")
+
+while True:
+    choice = input("What do you want to do?:\n add = A\n delete = D\n update = U\n search = S\n display = DS\n")
+    match choice: 
+        case 'A':
+                ask = input("What do you want to add: Category = c\n, product = p\n")
+
+                if (ask == 'c'):
+                    ad_ct()
+                    display()
+                elif (ask == 'p'):
+                    ad_pr()
+                    display_p()
+
+
+            

@@ -1,0 +1,11 @@
+# find min max 
+x = min(20,25,75)
+y = max(100,23,67)
+print(x)
+print(y)
+# ------------------------
+# MAKIng neg value pos
+x=abs(-25.4)
+print(x)
+# --------------------
+
