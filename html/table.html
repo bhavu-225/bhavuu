@@ -4,9 +4,9 @@
 table,th, td 
 {
     border:1px solid black;
-    <!-- background-color: aqua; -->
+    background-color: aqua;
     border-collapse: collapse;
-  <!-- border-radius:10px;     -->
+   border-radius:10px;
 }
 th,td 
 {
@@ -24,27 +24,31 @@ tr:nth-child(even),td:nth-child(even)
 
 <table style="width: 100%;">
     <caption>Details</caption>
+    <!-- <colgroup>
+      <col span="2" style="background-color: #D6EEEE">
+    </colgroup> -->
   <tr>
-    <th>Name</th>
+    <th colspan="2">Name</th>
     <th>semester</th>
-    <th>College</th>
+    <!-- <th>College</th> -->
   </tr>
   <tr>
     <td>Bhavi</td>
-    <td>8<sup>th</sup></td>
+    <td rowspan="3">8<sup>th</sup></td>
     <td>VGEC</td>
   </tr>
   <tr>
     <td>Themyy</td>
-    <td>8<sup>th</sup></td>
+    <!-- <td>8<sup>th</sup></td> -->
     <td>GEC</td>
   </tr>
   <tr>
     <td>rehmat</td>
-    <td>8<sup>th</sup></td>
+    <!-- <td>8<sup>th</sup></td> -->
     <td>SAL</td>
   </tr>
 </table>
 </body>
 </html>
+
 

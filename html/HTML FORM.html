@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>REGISTRATION FORM</h1>
+
+<form style="background-color:plum" target="_blank" method="get">
+    
+    <fieldset>
+        <legend>Basic Information:</legend>
+            <label for="fname" style="font-size:large">First name:</label><br>
+                <input type="text" id="fname" name="fname" ><br>
+            <label for="lname" style="font-size:large;">Last name:</label><br>
+                <input type="text" id="lname" name="lname" ><br>
+            <label for="Date Of Birth" style="font-size:large;">Date Of Birth:</label><br>
+                <input type="date" id="Date Of Birth" name="Date Of Birth" ><br>
+                <input type="image" src="img_submit.gif" alt="Submit" width="30" height="50"><br>
+                    
+            <label for="Name Of Organization" style="font-size:large;">Name Of Organization:</label><br>
+                <input type="text" id="Name Of Organization" name="Name Of Organization" >
+    </fieldset>    
+
+<h2>Now Choose your prefer language:</h2>
+<fieldset>
+    <legend>Language Preference:</legend>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+</fieldset>
+
+<h3 style="font-size:x-large">How would you like too come to the college?</h3>
+<fieldset>
+    <legend>Travelling Preference:</legend>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="bike">which bike you want??</label>
+<select id="cars" name="cars">
+    <option value="BMW">BMW</option>
+    <option value="R15" selected>R15</option>
+    <option value="RFZ">RFZ</option>
+    <option value="BUGGATI">Audi</option>
+  </select>
+<label for="vehicle1" style="font-size:large">select any bike</label><br>
+   
+<input type="checkbox" id="vehicle2" name="vehicle2" value="car"> 
+<label for="cars">which car you want??</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi" selected>Audi</option>
+</select>
+<label for="vehicle2" style="font-size:large">select any car</label><br>
+
+    
+<input type="checkbox" id="vehicle3" name="vehicle3" value="bus">
+<label for="bus">which bus you want??</label>
+<select id="bus" name="bus">
+    <option value="AMTS">AMTS</option>
+    <option value="BRTS">BRTS</option>
+    <option value="ST">ST</option>
+    <option value="VOLVO"selected>VOLVO</option>
+  </select>
+<label for="vehicle3" style="font-size:large">select any bus</label><br><br>
+</fieldset><br>
+
+<textarea name="message" rows="1" cols="20">Drive slowly.Be safe </textarea>
+  <br><br>
+
+<input type="submit" value="Submit" ><br><br>
+<button type="button" onclick="alert('Sucessfully submitted..!!')">Click Me!</button>
+</form>
+</body>
+</html>
