@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        table,th,td
+        {
+            border: 1px;
+            border-style:solid;
+        }
+      </style>  
+        <script>
+            function getdata() 
+            {
+                var col;
+                col= column(document.getElementById("column").value);
+                    for(var i=1; i<=row; i++)
+                         {
+                            var para = document.createElement("a"); 
+                            para.setAttribute("id", "k" + i); 
+                            main.appendChild(para);
+                            document.getElementById("k" + i).innerText = "enter data (" + i + ") : "; 
+                            var x = document.createElement("INPUT"); 
+                            x.setAttribute("id", "a" + i); 
+                            x.setAttribute("type", "text"); 
+                            var b = document.getElementById("k" + i); 
+                            b.appendChild(x); 
+                         }  
+        
+                    var sub = document.createElement("INPUT"); 
+                    sub.setAttribute("type", "text");
+                    sub.setAttribute("id", "b");
+                    sub.setAttribute("onclick", "printTable()");
+                    sub.setAttribute("value", "Print Table");
+                    main.appendChild(sub); 
+                    
+                function printTable()
+                    var rows; 
+                    rows= row(document.getElementById("row").value);
+                    for(var i=1; i<=row; i++) 
+               
+                { 
+                 var x= documnet.getElementById(pPrint);
+                x.getElementById("printtable").innerHTML += "<tr id="+ i+">"+ "" +"  </tr>"
+                            for(let j=1; j<=col; j++)
+                            {
+                                 console.log(document.getElementById("a" + j));
+                                document.getElementById(i).innerHTML += "<td id='d'>"+ document.getElementById("a" + j).value +"  </td>"
+                            }
+                }       
+            }         
+            </script>
+    </head>
+
+    <body>
+        No of Rows: <input type="number" name="row"><br>  
+        No of Cols: <input type="number" name="column"><br>
+       <p id="b"></p>
+        <p id="a"></p>
+        <p><input type="button" value="print table." onclick=" getdata()"></p>
+        <table id="tbl"> </table>
+    </body>
+</html>

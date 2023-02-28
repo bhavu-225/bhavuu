@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    table,th,td{
+        border: 2px;
+            border-style:solid;  
+    }
+</style> 
+</head>
+
+<body>
+
+    <script>  
+
+        function getdata()
+        {
+            var col=document.myform.col.value; 
+            var main = document.getElementById("main");
+
+                for(let i=1; i<=col; i++)
+                {
+                    var para = document.createElement("g"); 
+                    para.setAttribute("id", "h" + i); 
+                    main.appendChild(para);
+                    document.getElementById("h" + i).innerText = "enter data (" + i + ") : "; 
+                    var x = document.createElement("INPUT"); 
+                    x.setAttribute("id", "g" + i); 
+                    x.setAttribute("type", "text"); 
+                    var b = document.getElementById("h" + i); 
+                    b.appendChild(x); 
+                }  
+
+            var sub = document.createElement("INPUT"); 
+            sub.setAttribute("type", "button");
+            sub.setAttribute("id", "b");
+            sub.setAttribute("onclick", "printTable()");
+            sub.setAttribute("value", "Print Table");
+            main.appendChild(sub); 
+
+        }
+        function printTable(){  
+        var row=document.myform.row.value;  
+        var col=document.myform.col.value;  
+        for(let i=1; i<=row; i++)
+        {   
+            document.getElementById("tbl").innerHTML += "<tr id="+ i+">"+ "" +"  </tr>"
+            for(let j=1; j<=col; j++)
+            {
+                // console.log(document.getElementById("g" + j));
+                document.getElementById(i).innerHTML += "<td id='d'>"+ document.getElementById("g" + j).value +"  </td>"
+            }
+        }
+    }  
+
+    </script>  
+
+    <form name="myform" > 
+
+        No of Rows: <input type="number" name="row"><br/>  
+        No of Cols: <input type="number" name="col"><br/> 
+        <div id="main"></div>
+        <p id="g"></p>
+        <p id="b"></p>
+        <button type="button"  onclick=" getdata()">Get Data</button>     
+        <table id="tbl"> </table>
+
+    </form>  
+</body>
+</html>
